@@ -393,7 +393,7 @@ header .container span.icon span:last-child {
 .to-do-list .container .list .task button {
   display: flex;
   margin: 0 auto;
-  background-color: red;
+  background-color: #1e2231;
   opacity: .5;
   border: none;
   padding: 10px;
