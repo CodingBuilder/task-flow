@@ -1,0 +1,704 @@
+/* Global Rules Start */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: hsl(218deg 33.81% 12.47%);
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--mainColor) var(--thirdColor);
+  --mainColor: hsl(150, 100%, 66%);
+  --secondColor: hsl(218deg 34.2% 8.32%);
+  --thirdColor: hsl(217deg 25.15% 25.91%);
+  --mainPadding: 100px;
+  --descriptionColor: rgb(207 207 207 / 68%);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Global Rules End */
+
+/* Heading Component Start */
+
+.heading-component {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.heading-component h2 {
+  color: var(--mainColor);
+  font-size: 50px;
+  margin: 0 0 40px;
+  position: relative;
+}
+
+.heading-component h2::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background-color: white;
+}
+
+.heading-component h2::after {
+  content: "";
+  position: absolute;
+  bottom: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px var(--mainColor) solid;
+}
+
+.heading-component p {
+  color: var(--descriptionColor);
+  line-height: 1.7;
+  width: 500px;
+  margin: 50px auto;
+  max-width: 100%;
+}
+
+/* Heading Component End */
+
+/* header Start */
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  header .container {
+    padding: 20px 30px;
+  }
+}
+
+header .container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 1px;
+  background-color: white;
+  z-index: 2;
+}
+
+header .container .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .container .logo i {
+  font-size: 30px;
+  color: var(--mainColor);
+  margin-right: 30px;
+}
+
+header .container .logo span {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--mainColor);
+}
+
+header .container ul {
+  flex: 1;
+  text-align: left;
+  justify-content: flex-end;
+  display: flex;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  header .container ul {
+    left: 0;
+    background-color: var(--thirdColor);
+    z-index: 2;
+    display: none;
+    transition: .3s;
+  }
+  header .container ul.show {
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    top: 73%;
+    width: 100%;
+    max-height: fit-content;
+    padding: 0;
+    margin-top: 20px;
+    border-bottom: 2px white solid;
+  }
+}
+
+header .container ul li {
+  padding: 40px 30px 20px;
+  position: relative;
+  cursor: pointer;
+  transition: .3s;
+}
+
+@media (max-width: 768px) {
+  header .container ul li {
+    padding: 20px;
+  }
+}
+
+header .container ul li:hover,
+header .container ul li.active {
+  background-color: var(--mainColor);
+}
+
+header .container ul li a {
+  color: white;
+  font-size: 20px;
+  transition: .3s;
+}
+
+header .container ul li:hover a,
+header .container ul li.active a {
+  color: black;
+}
+
+header .container span.icon {
+  height: 25px;
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header .container span.icon {
+    display: inline-block;
+  }
+}
+
+header .container span.icon span {
+  position: absolute;
+  background-color: white;
+  height: 4px;
+  width: 100%;
+  transition: .3s;
+}
+
+header .container span.icon.active span {
+  background-color: var(--mainColor);
+}
+
+header .container span.icon span:first-child {
+  top: 0;
+}
+
+header .container span.icon span:nth-child(2) {
+  top: 10px
+}
+
+header .container span.icon span:last-child {
+  bottom: 0;
+}
+
+/* Header End */
+
+/* To Do List Start */
+
+.to-do-list {
+  padding: var(--mainPadding) 0;
+}
+
+.to-do-list .container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.to-do-list .container .add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.to-do-list .container .add input {
+  flex: 1;
+  margin-right: 20px;
+  border-radius: 20px;
+  border: none;
+  height: 40px;
+  background-color: var(--thirdColor);
+  color: var(--mainColor);
+  font-weight: bold;
+  caret-color: var(--mainColor);
+  padding: 20px 40px;
+  letter-spacing: 2px;
+}
+
+.to-do-list .container .add button {
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: var(--mainColor);
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+@media (max-width: 768px) {
+  .to-do-list .container .add button {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.to-do-list .container .add button:hover {
+  box-shadow: 0 0 20px 5px var(--mainColor);
+}
+
+.to-do-list .container .list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.to-do-list .container .list .task {
+  background-color: var(--thirdColor);
+  border-radius: 10px;
+  padding: 20px;
+  flex-basis: calc((100% / 3) - 2%);
+  margin-bottom: 20px;
+  margin-right: 2%;
+  height: 200px;
+  max-height: 100%;
+  cursor: pointer;
+  transition: .3s;
+  border: 1px #a3a3a3 solid;
+}
+
+.to-do-list .container .list .task.completed {
+  border: 1px var(--mainColor) solid;
+}
+
+.to-do-list .container .list .task:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+  .to-do-list .container .list .task {
+    flex-basis: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .to-do-list .container .list .task {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+.to-do-list .container .list .task .title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.to-do-list .container .list .task .title .finished {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: .3s;
+}
+
+.to-do-list .container .list .task .title .finished::before {
+  content: "\3f";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s;
+}
+
+.to-do-list .container .list .task .title .finished.completed {
+  background-color: var(--mainColor);
+}
+
+.to-do-list .container .list .task .title .finished.completed::before {
+  content: "\f00c";
+}
+
+.to-do-list .container .list .task .title p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  transition: .3s;
+  font-size: 20px;
+}
+
+.to-do-list .container .list .task .title p.completed {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+.to-do-list .container .list .task button {
+  display: flex;
+  margin: 0 auto;
+  background-color: red;
+  opacity: .5;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: .3s;
+}
+
+.to-do-list .container .list .task button:hover {
+  opacity: 1;
+}
+
+/* To Do List End */
+
+/* Guide Start */
+
+.guide {
+  padding: var(--mainPadding) 0;
+  background-color: var(--secondColor);
+}
+
+.guide .container .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .guide .container .cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+.guide .container .cards .card {
+  text-align: center;
+  padding: 40px 25px;
+  background-color: var(--thirdColor);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.guide .container .cards .card:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .guide .container .cards .card:hover {
+    transform: none;
+  }
+}
+
+.guide .container .cards .card i {
+  font-size: 50px;
+  color: var(--mainColor);
+}
+
+.guide .container .cards .card:hover i {
+  animation: spin 1s;
+}
+
+@keyframes spin {
+  to {
+    transform: rotateY(1turn);
+  }
+}
+
+.guide .container .cards .card h3 {
+  color: var(--mainColor);
+  margin: 30px auto 100px;
+  font-size: 25px;
+  position: relative;
+}
+
+.guide .container .cards .card h3::before {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--descriptionColor);
+  width: 100%;
+  height: 1px;
+}
+
+.guide .container .cards .card h3::after {
+  content: "";
+  position: absolute;
+  bottom: -57px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(207 207 207);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px var(--mainColor) solid;
+}
+
+.guide .container .cards .card p {
+  color: white;
+  line-height: 1.7;
+}
+
+/* Guide End */
+
+/* About Start */
+
+.about {
+  padding: var(--mainPadding) 0;
+}
+
+.about .container .description {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  .about .container .description {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.about .container .description .text {
+  flex-basis: 60%;
+}
+
+.about .container .description h2 {
+  font-size: 40px;
+  color: var(--mainColor);
+}
+
+.about .container .description p {
+  color: white;
+  line-height: 1.7;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.about .container .description img {
+  height: 350px;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  .about .container .description img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .container .description img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* About End */
+
+/* Contact Start */
+
+.contact {
+  padding: var(--mainPadding) 0;
+  background-size: cover;
+  position: relative;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+
+.contact .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .contact .container {
+    flex-direction: column;
+  }
+}
+
+.contact .container form {
+  width: 500px;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  position: relative;
+}
+
+.contact .container form i {
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+  flex-basis: 50%;
+}
+
+.contact .container form input {
+  height: 50px;
+}
+
+.contact .container form .email {
+  width: calc(100% - 135px);
+  background: none;
+  border: 1px white solid;
+  border-right: none;
+  caret-color: var(--mainColor);
+  color: var(--mainColor);
+  padding: 20px 20px 20px 65px;
+}
+
+.contact .container form .submit {
+  background: var(--mainColor);
+  border: 1px white solid;
+  border-left: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  width: 135px;
+  cursor: pointer;
+  font-weight: bold;
+  opacity: .7;
+  transition: .3s;
+}
+
+.contact .container form .submit:hover {
+  opacity: 1;
+}
+
+.contact .container p {
+  color: white;
+  margin-left: 30px;
+  flex-basis: 50%;
+}
+
+@media (max-width: 992px) {
+  .contact .container p {
+    margin: 50px 0 0;
+    text-align: center;
+  }
+}
+
+/* Contact End */
+
+/* Footer Start */
+
+footer {
+  padding: 50px 0;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .container h2 {
+  color: var(--mainColor);
+  font-size: 40px;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+footer .container .icons {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+footer .container .icons::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 1px;
+  bottom: -20px;
+}
+
+footer .container .icons i {
+  font-size: 28px;
+  margin-right: 10px;
+  color: white;
+  transition: .3s;
+  cursor: pointer;
+}
+
+footer .container .icons i:hover {
+  color: var(--mainColor);
+}
+
+footer .container .copyright{
+  color: var(--descriptionColor);
+}
+
+footer .container .copyright .special{
+  color: var(--mainColor);
+}
+
+/* Footer End */

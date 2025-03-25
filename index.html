@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Icon -->
+    <link rel="icon" href="imgs/icon.png" type="images/png">
+    <title>Task Flow</title>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <i class="fa-solid fa-list-check"></i>
+          <span>Task<br>Flow</span>
+        </div>
+        <ul>
+          <li class="active" data-section="home"><a>Main</a></li>
+          <li data-section="guide"><a>Guide</a></li>
+          <li data-section="about"><a>About</a></li>
+          <li data-section="contact"><a>Contact</a></li>
+          <li data-section="social"><a>Social</a></li>
+        </ul>
+        <span class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- To Do List Start -->
+    <form class="to-do-list">
+      <div class="container">
+        <div class="add">
+          <input type="text" name="add-task" class="add-task" spellcheck="false" autofocus>
+          <button type="button">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="list"></div>
+      </div>
+    </form>
+    <!-- To Do List End -->
+
+    <!-- Guide Start -->
+    <div class="guide" id="guide">
+      <div class="container">
+        <div class="heading-component">
+          <h2>Guide</h2>
+          <p>Master your daily tasks with our simple guide. Discover all features, tips, and tricks to manage your to-do list
+            better</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <i class="fa-solid fa-feather"></i>
+            <h3>Write Your Tasks</h3>
+            <p>Start by writing down everything you need to get done. Capture your thoughts clearly, set your priorities, and create
+              a structured list to help you stay organized and focused every day.</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-hand-pointer"></i>
+            <h3>Add It To The List</h3>
+            <p>Once you've written down your tasks, add them clearly to your list and only specify the recipe. Click this to track
+              your progress so you don't forget important tasks..</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-list-check"></i>
+            <h3>Completed Tasks</h3>
+            <p>As you complete tasks, mark them as completed to track your progress or just remove them. Seeing your progress will
+              motivate you to
+              continue working more efficiently.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Guide End -->
+
+    <!-- About Start -->
+    <div class="about" id="about">
+      <div class="container">
+        <div class="heading-component">
+          <h2>About the developer</h2>
+          <p>Learn about the developer of this tool, the developer's vision, and how he can help you.</p>
+        </div>
+        <div class="description">
+          <div class="text">
+            <h2>CodingBuilder</h2>
+            <p>I'm a passionate web developer focused on building interactive, efficient and user-friendly web applications. With a
+              strong foundation in HTML, CSS, JavaScript and TypeScript, I specialize in crafting responsive designs and optimizing
+              performance.</p>
+          </div>
+          <img src="imgs/about.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+    
+    <!-- Contact Start -->
+    <div class="contact" id="contact">
+      <div class="heading-component">
+        <h2>Get in touch</h2>
+      </div>
+      <div class="container">
+        <form>
+          <i class="far fa-envelope fa-lg"></i>
+          <input type="text" name="email" class="email" placeholder="Your email">
+          <input type="submit" value="Contact" class="submit">
+        </form>
+        <p>Have a question or a project in mind? Feel free to reach me out! Let's collaborate and create something amazing
+          together.</p>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <footer class="social">
+      <div class="container">
+        <h2>Follow me in the social media</h2>
+        <div class="icons">
+          <a href="https://www.github.com/CodingBuilder" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:ahmed.shalaby1243@gmail.com" target="_blank"><i class="fa-brands fa-google"></i></a>
+          <a href="https://www.linkedin.com/in/ahmed-ibrahim-75221031b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100014532674374" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <div class="copyright">&copy;
+          <span class="year"></span> - <span class="special">CodingBuilder</span> All Rights Reserved</div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="dist/main.js"></script>
+  </body>
+</html>
