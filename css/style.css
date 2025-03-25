@@ -319,6 +319,10 @@ header .container span.icon span:last-child {
   cursor: pointer;
   transition: .3s;
   border: 1px #a3a3a3 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .to-do-list .container .list .task.completed {
