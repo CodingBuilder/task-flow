@@ -1,7 +1,7 @@
-#TaskFlow
+# TaskFlow
 TaskFlow is a sleek and efficient task management web app designed to help users organize their daily tasks effortlessly. Built with modern web technologies, it provides a smooth and intuitive experience for managing to-do lists.
 
-##🚀 Features
+## 🚀 Features
 📝 Add, edit, and delete tasks easily
 
 ✅ Mark tasks as completed
@@ -10,10 +10,10 @@ TaskFlow is a sleek and efficient task management web app designed to help users
 
 ⚡ Optimized for performance and speed
 
-##🛠️ Tech Stack
+## 🛠️ Tech Stack
 HTML, CSS, JavaScript, TypeScript
 
-##Contact
+## Contact
 For any questions or collaboration, feel free to reach out:
 📧 Email: [ahmed.shalaby1243@gmail.com]
 🐙 GitHub: CodingBuilder
