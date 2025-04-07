@@ -81,8 +81,11 @@ function add(taskTitle, toLocalStorage, completed = false) {
     title.appendChild(checkBtn);
     title.appendChild(task);
     let removeBtn = document.createElement("button");
-    removeBtn.textContent = "Remove";
+    let remove = document.createTextNode("Remove");
+    let trash = document.createElement("i");
+    trash.classList.add("fa-solid", "fa-trash");
     removeBtn.setAttribute("type", "button");
+    removeBtn.append(remove, trash);
     removeBtn.addEventListener("click", () => removeTask(removeBtn, task));
     taskContainer.appendChild(removeBtn);
     tasksContainer.appendChild(taskContainer);

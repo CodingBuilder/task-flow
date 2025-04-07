@@ -277,6 +277,7 @@ header .container span.icon span:last-child {
   caret-color: var(--mainColor);
   padding: 20px 40px;
   letter-spacing: 2px;
+  min-width: 200px;
 }
 
 .to-do-list .container .add button {
@@ -288,6 +289,9 @@ header .container span.icon span:last-child {
   font-size: 20px;
   cursor: pointer;
   transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -326,7 +330,7 @@ header .container span.icon span:last-child {
 }
 
 .to-do-list .container .list .task.completed {
-  border: 1px var(--mainColor) solid;
+  border: 2px var(--mainColor) solid;
 }
 
 .to-do-list .container .list .task:hover {
@@ -400,12 +404,16 @@ header .container span.icon span:last-child {
   background-color: #1e2231;
   opacity: .5;
   border: none;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 15px;
   font-weight: bold;
   cursor: pointer;
   color: white;
   transition: .3s;
+}
+
+.to-do-list .container .list .task button i {
+  margin-left: 10px;
 }
 
 .to-do-list .container .list .task button:hover {
